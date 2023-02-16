@@ -5,6 +5,16 @@
  */
 int main(void)
 {
+	char;
+	int;
+	short;
+	long;
+	long long;
+	float;
+	double;
+	long double;
+	long int;
+
 	printf("Size of char %lu bytes(s)\n", size of(char));
 	printf("Size of int %lu bytes(s)\n", size of(int));
 	printf("Size of short %lu bytes(s)\n", size of(short));
