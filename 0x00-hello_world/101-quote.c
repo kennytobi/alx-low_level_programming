@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
-
 /**
  * main - A C program that prints a line to the standard output
- *
  * Return: 1 (Success)
  */
 int main(void)
