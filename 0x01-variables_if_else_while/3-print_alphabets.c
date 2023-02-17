@@ -10,7 +10,7 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		purchar(c);
+		putchar(c);
 	}
 	for (c = 'A'; c <= 'Z'; c++)
 	{
