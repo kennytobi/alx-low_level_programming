@@ -10,8 +10,8 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			printf("%2d, ", i * j);
+			_putchar("%2d, ", i * j);
 		}
-		printf("\n");
+		_putchar("\n");
 	}
 }
