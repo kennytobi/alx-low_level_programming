@@ -2,6 +2,7 @@
 /**
  * puts2 - functions that print every other character of aa string starting
  * with a first line
+ * @str: string parameter input
  * Return - nothing
  */
 void puts2(char *str)
