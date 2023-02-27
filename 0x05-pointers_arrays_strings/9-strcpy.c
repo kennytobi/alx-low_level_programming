@@ -2,7 +2,7 @@
 /**
  * _strcpy - a function that copies a string from one pointer to another
  * including the terminating null byte (\0)
- * @src: source of string 
+ * @src: source of string
  * @dest: destination of string
  * Return: pointer to dest input parameter
  */
