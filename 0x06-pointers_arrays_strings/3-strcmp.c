@@ -1,5 +1,3 @@
-#include "main.h"
-#include <string.h>
 /**
  * _strcmp - a function that compare two strings
  * @s1: Pointer to first string
@@ -10,21 +8,20 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 != '\0' && *s2 != '\0')
+	int i = 0, r;
+
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (*s1 != *s2)
+		if (s1[i] != s2[i])
 		{
-			return (*s1 > *s2) ? 1 : -1;
+			r = s1[i] - s2[i];
+			break;
 		}
-		s1++;
-		s2++;
+		else
+		{
+			r = s1[i] - s2[i];
+		}
+		i++;
 	}
-	if (*s1 == '\0' && *s2 == '\0')
-	{
-		return (0);
-	}
-	else
-	{
-		return (*s1 == '\0') ? -1 : 1;
-	}
+	return (r);
 }
