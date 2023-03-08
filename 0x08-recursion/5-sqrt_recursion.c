@@ -1,49 +1,36 @@
 #include "main.h"
-int sqrt_helper(int n, int start, int end);
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: integer input
- * Return: integer square root of n, -1 if n does not have a natural square
- * root
+ * power_operation - returns the natural square root of a number.
+ * @n: input number.
+ * @c: iterator.
+ * Return: square root or -1.
  */
+
+int power_operation(int n, int c)
+{
+	if (c % (n / c) == 0)
+	{
+		if (c * (n / c) == n)
+			return (c);
+		else
+			return (-1);
+	}
+	return (0 + power_operation(n, c + 1));
+}
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: input number.
+ * Return: natural square root.
+ */
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-	{
 		return (-1);
-	}
-	else
-	{
-		return (sqrt_helper(n, 0, n));
-	}
-}
-/**
- * sqrt_helper - helper function for _sqrt_recursion
- * @n: integer input
- * @start: starting point for binary search
- * @end: ending point for binary search
- * Return: integer square root of n, -1 if n does not
- * have a natural sqaure root
- */
-int sqrt_helper(int n, int start, int end)
-{
-	int mid = (start + end) / 2;
-	int mid_sq = mid * mid;
-
-	if (start > end)
-	{
-		return (-1);
-	}
-	else if (mid_sq == n)
-	{
-		return (mid);
-	}
-	else if (mid_sq < n)
-	{
-		return (sqrt_helper(n, mid + 1, end));
-	}
-	else
-	{
-		return (sqrt_helper(n, start, mid - 1, end));
-	}
+	if (n == 0)
+		return (0);
+	if (n == 1)
+		return (1);
+	return (power_operation(n, 2));
 }
