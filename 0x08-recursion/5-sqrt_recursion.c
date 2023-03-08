@@ -44,6 +44,6 @@ int sqrt_helper(int n, int start, int end)
 	}
 	else
 	{
-		return (sqrt_helper(n, mid - 1, start));
+		return (sqrt_helper(n, start, mid - 1, end));
 	}
 }
