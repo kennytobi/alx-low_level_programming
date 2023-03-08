@@ -9,15 +9,13 @@
  */
 int is_palindrome(char *s)
 {
-	int i, j;
-	int len = strlen(s);
-
-	for (i = 0, j = len - 1; i < j; i++, j--)
+	if (*s == '\0')
 	{
-		if (s[i] != s[j])
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (1);
+	if (*s == *(s + strlen(s) - 1))
+	{
+		return (is_palindrome(s + 1));
+	}
+	return (0);
 }
