@@ -1,15 +1,13 @@
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 #include "main.h"
+
 /**
- * strtow - splits a string into words.
- * @str: the string to split
- * Return: if str is NULL, str is emoty or memory allocation failes, return
- * NULL otherwise, returns a pointer to an array of strings (words).
- * the last element of the array is NULL.
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
+ *
+ * Return: number of words
  */
-char **strtow(char *str)
+int count_word(char *s)
 {
 	int flag, c, w;
 
