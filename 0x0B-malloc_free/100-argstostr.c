@@ -10,7 +10,6 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *argstostr;
 	char *result;
 	int i;
 	size_t total_length, index;
