@@ -12,6 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat_str;
+	int len1, len2;
 
 	if (s1 == NULL)
 	{
@@ -21,12 +22,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	concat_str = (char *)malloc(strlen(s1) + strlen(s2) + 1);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	concat_str = malloc(len1 + len2 + 1);
 	if (concat_str == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(concat_str, s1);
-	strcpy(concat_str, s2);
+	memcpy(concat_str, s1, len1);
+	memcpy(concat_str + len1, s2, len2 + 1);
 	return (concat_str);
 }
