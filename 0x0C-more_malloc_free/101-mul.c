@@ -45,7 +45,7 @@ void multiply(char *num1, char *num2)
 	{
 		for (j = len2 - 1; j >= 0; j--)
 		{
-			product = (num1[1] - '0') * (num2[j] - '0');
+			product = (num1[i] - '0') * (num2[j] - '0');
 			sum = result[i + j + 1] + product;
 			result[i + j + 1] = sum % 10;
 			result[i + j] += sum / 10;
