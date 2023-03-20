@@ -2,7 +2,7 @@
 #include <string.h>
 #include "dog.h"
 /**
- * newdog - creates a new dogt object
+ * new_dog - creates a new dogt object
  * @name: name of dog
  * @age: age of the dog
  * @owner: owner of the dog
