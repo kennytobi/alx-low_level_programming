@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "function_pointers.h"
 /**
  * int_index - function to return index of compound int
  * @array: pointer to array of int type
